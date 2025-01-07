@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowScripts - Editor</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://i.ibb.co/xMnzd6n/imagecool-9.png"/>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.ibb.co/dp5vDDr/Screenshot-2025-01-07-180711.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #blurOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(40px);
+            z-index: -1;
+        }
+        #confirmationBox {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+        }
+        p {
+            margin: 0 0 20px 0;
+            font-size: 1.1em;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+        .button.no {
+            background-color: #d9534f;
+        }
+        .button.yes {
+            background-color: #5cb85c;
+        }
+        .button.yes:hover {
+            background-color: #76d476;
+        }
+        .button.no:hover {
+            background-color: #f47773;
+        }
+    </style>
+</head>
+<body>
+    <div id="blurOverlay"></div>
+    <div style="box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.86);
+    -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.332);
+    -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.86);" id="confirmationBox">
+        <h1>Are you sure you want to leave the editor?</h1>
+        <p>Your progress will be lost!</p>
+        <a href="#" class="button no" onclick="history.back(); return false;">No</a>
+        <a href="https://flowscripts.github.io" class="button yes">Yes</a>
+    </div>
+</body>
+</html>
